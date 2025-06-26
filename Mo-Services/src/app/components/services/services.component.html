@@ -1,0 +1,89 @@
+<div class="services-container">
+  <div class="services-header">
+    <h1>Our Service Packages</h1>
+    <p>Choose the perfect package for your business needs</p>
+  </div>
+  
+  <div class="packages-grid">
+    <div class="package-card" *ngFor="let package of packages; let i = index" [class]="'package-' + (i + 1)">
+      <div class="package-header">
+        <h3>{{ package.name }}</h3>
+        <div class="package-price">
+          <span class="price">{{ package.price }}</span>
+          <span class="currency">kr</span>
+        </div>
+      </div>
+      
+      <div class="package-content">
+        <ul class="features-list">
+          <li *ngFor="let feature of package.features" class="feature-item">
+            <span class="check-icon">✓</span>
+            {{ feature }}
+          </li>
+        </ul>
+        
+        <div class="support-info" *ngIf="package.support">
+          <div class="support-badge">
+            <span class="support-icon">🛠️</span>
+            {{ package.support }}
+          </div>
+        </div>
+      </div>
+      
+      <div class="package-footer">
+        <button class="select-package-btn" [class]="'btn-' + (i + 1)">
+          Choose {{ package.name }}
+        </button>
+      </div>
+    </div>
+    
+    <!-- Custom option moved as the 4th package card -->
+    <div class="package-card package-4">
+      <div class="package-header">
+        <h3>Custom Package</h3>
+        <div class="package-price">
+          <span class="price">?</span>
+          <span class="currency">kr</span>
+        </div>
+      </div>
+      
+      <div class="package-content">
+        <ul class="features-list">
+          <li class="feature-item">
+            <span class="check-icon">✓</span>
+            Tailored to your specific needs
+          </li>
+          <li class="feature-item">
+            <span class="check-icon">✓</span>
+            Flexible pricing options
+          </li>
+          <li class="feature-item">
+            <span class="check-icon">✓</span>
+            Scalable solutions
+          </li>
+          <li class="feature-item">
+            <span class="check-icon">✓</span>
+            Advanced integrations
+          </li>
+          <li class="feature-item">
+            <span class="check-icon">✓</span>
+            Dedicated project manager
+          </li>
+        </ul>
+        
+        <div class="support-info">
+          <div class="support-badge">
+            <span class="support-icon">🛠️</span>
+            Premium Support
+          </div>
+        </div>
+      </div>
+      
+      <div class="package-footer">
+        <a routerLink="/contact" class="select-package-btn btn-4" style="display: block; text-decoration: none;">
+          Get Custom Quote
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

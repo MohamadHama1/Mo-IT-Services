@@ -1,0 +1,31 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-content {
+  flex: 1;
+  overflow: hidden; /* Changed from overflow-y: auto to hidden */
+  padding: 0;
+  height: calc(100vh - 120px); /* Subtract approximate navbar + footer height */
+  max-height: calc(100vh - 120px);
+}
+
+/* Allow scrolling on mobile devices */
+@media (max-width: 768px) {
+  .app-container {
+    height: auto;
+    max-height: none;
+    overflow: visible;
+  }
+  
+  .main-content {
+    overflow-y: auto;
+    height: auto;
+    max-height: none;
+  }
+}
