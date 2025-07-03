@@ -1,52 +1,43 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterLink } from '@angular/router';
+import { FirebaseService } from '../../services/firebase.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-services',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink],
   templateUrl: './services.component.html',
   styleUrl: './services.component.scss'
 })
-export class ServicesComponent {
-  packages = [
-    {
-      name: 'Budget Package',
-      price: '7,000',
-      support: '1 Month Free Tech Support',
-      features: [
-        'Website & App Development',
-        'Domain Registration & Management',
-        'Search Engine Optimization (SEO)',
-        'Training & Consultation',
-        '1 Month Free Tech Support & Maintenance'
-      ]
-    },
-    {
-      name: 'Professional Package',
-      price: '11,000',
-      support: '2 Months Free Tech Support',
-      features: [
-        'Everything in Budget Package',
-        'Web Hosting & Deployment',
-        'Business Email Setup',
-        'Personal Dashboard',
-        '2 Months Free Tech Support & Maintenance'
-      ]
-    },
-    {
-      name: 'Premium Package',
-      price: '15,000',
-      support: '3 Months Free Tech Support',
-      features: [
-        'Everything from Professional Package',
-        'Social Media Integration',
-        'Social Media Management',
-        'Easy Online Ordering',
-        'Flexible Payment Options',
-        'Chat Bot Implementation',
-        '3 Months Free Tech Support & Maintenance'
-      ]
+export class ServicesComponent implements OnInit, OnDestroy {
+  servicesTexts: any = {};
+  packages: any[] = [];
+  private subscription: Subscription = new Subscription();
+
+  constructor(private firebaseService: FirebaseService) {}
+
+  ngOnInit() {
+    this.subscription.add(
+      this.firebaseService.getSectionTranslations('services').subscribe(texts => {
+        this.servicesTexts = texts;
+        this.updatePackages();
+      })
+    );
+  }
+
+  ngOnDestroy() {
+    this.subscription.unsubscribe();
+  }
+
+  private updatePackages() {
+    if (this.servicesTexts.packages) {
+      this.packages = [
+        this.servicesTexts.packages.budget,
+        this.servicesTexts.packages.professional,
+        this.servicesTexts.packages.premium
+      ].filter(pkg => pkg); // Filter out undefined packages
     }
-  ];
+  }
 }

@@ -1,0 +1,10 @@
+<div class="language-selector-inline">
+  <span 
+    *ngFor="let lang of languages; let i = index"
+    class="language-option"
+    [class.active]="lang.code === currentLanguage"
+    (click)="selectLanguage(lang.code)">
+    {{ lang.code.toUpperCase() }}
+    <span *ngIf="i < languages.length - 1" class="separator">|</span>
+  </span>
+</div>

@@ -1,0 +1,504 @@
+{
+  "translations": {
+    "en": {
+      "navbar": {
+        "brand": "Mo IT Services",
+        "about": "About Us",
+        "services": "Services",
+        "portfolio": "Portfolio",
+        "contact": "Contact"
+      },
+      "about": {
+        "title": "About Mo IT Services",
+        "description": "We are a passionate team of technology experts dedicated to transforming businesses through innovative digital solutions. With years of experience in web development, app creation, and digital marketing, we help companies establish a strong online presence and achieve their technological goals.",
+        "mission": "Our mission is to bridge the gap between technology and business success, delivering cutting-edge solutions that drive growth and innovation."
+      },
+      "services": {
+        "title": "Our Service Packages",
+        "subtitle": "Choose the perfect package for your business needs",
+        "packages": {
+          "budget": {
+            "name": "Budget Package",
+            "price": "7,000",
+            "support": "1 Month Free Tech Support",
+            "features": [
+              "Website & App Development",
+              "Domain Registration & Management",
+              "Search Engine Optimization (SEO)",
+              "Training & Consultation",
+              "1 Month Free Tech Support & Maintenance"
+            ]
+          },
+          "professional": {
+            "name": "Professional Package",
+            "price": "11,000",
+            "support": "2 Months Free Tech Support",
+            "features": [
+              "Everything in Budget Package",
+              "Web Hosting & Deployment",
+              "Business Email Setup",
+              "Personal Dashboard",
+              "2 Months Free Tech Support & Maintenance"
+            ]
+          },
+          "premium": {
+            "name": "Premium Package",
+            "price": "15,000",
+            "support": "3 Months Free Tech Support",
+            "features": [
+              "Everything from Professional Package",
+              "Social Media Integration",
+              "Social Media Management",
+              "Easy Online Ordering",
+              "Flexible Payment Options",
+              "Chat Bot Implementation",
+              "3 Months Free Tech Support & Maintenance"
+            ]
+          },
+          "custom": {
+            "name": "Custom Package",
+            "price": "?",
+            "support": "Premium Support",
+            "features": [
+              "Tailored to your specific needs",
+              "Flexible pricing options",
+              "Scalable solutions",
+              "Advanced integrations",
+              "Dedicated project manager"
+            ]
+          }
+        }
+      },
+      "portfolio": {
+        "title": "Our Featured Work",
+        "subtitle": "Showcasing our most impactful projects",
+        "projects": [
+          {
+            "title": "IKZ - Interkulturelles Zentrum",
+            "category": "Non-Profit Organization",
+            "year": "2024",
+            "description": "A comprehensive digital platform for a charity foundation based in Germany, focusing on intercultural exchange and community building. Features multilingual support and donation management.",
+            "image": "assets/portfolio/ikz-project.jpg",
+            "link": "https://interkulturelles-zentrum.org",
+            "technologies": ["Angular", "TypeScript", "Firebase", "Responsive Design", "SEO"]
+          },
+          {
+            "title": "Modern Restaurant Platform",
+            "category": "Restaurant & Hospitality",
+            "year": "2024",
+            "description": "A sophisticated restaurant website template featuring online menu display, reservation system, and modern responsive design optimized for the food service industry.",
+            "image": "assets/portfolio/restaurant-project.jpg",
+            "link": "https://restaurant-template-d4a6d.web.app/",
+            "technologies": ["React", "Firebase", "Material UI", "Progressive Web App", "Mobile-First"]
+          },
+          {
+            "title": "Legal Services Platform",
+            "category": "Legal & Professional Services",
+            "year": "2024",
+            "description": "Professional law firm website with client portal, case management features, and consultation booking system. Designed for maximum trust and accessibility.",
+            "image": "assets/portfolio/lawyer-project.jpg",
+            "link": null,
+            "technologies": ["Vue.js", "Node.js", "PostgreSQL", "Secure Authentication", "GDPR Compliant"]
+          }
+        ]
+      },
+      "contact": {
+        "title": "Get In Touch",
+        "subtitle": "Ready to start your next project? Let's discuss how we can help you achieve your goals.",
+        "form": {
+          "name": "Full Name",
+          "email": "Email Address",
+          "company": "Company (Optional)",
+          "service": "Service Interested In",
+          "message": "Project Description",
+          "messagePlaceholder": "Tell us about your project requirements, timeline, and any specific features you need...",
+          "submit": "Send Message"
+        }
+      },
+      "footer": {
+        "brand": "Mo IT Services",
+        "tagline": "Transforming businesses through technology.",
+        "quickLinks": "Quick Links",
+        "contact": "Contact",
+        "email": "info@mo-it-services.com",
+        "phone": "+46790208513",
+        "copyright": "© 2025 Mo IT Services. All rights reserved."
+      }
+    },
+    "sv": {
+      "navbar": {
+        "brand": "Mo IT Services",
+        "about": "Om Oss",
+        "services": "Tjänster",
+        "portfolio": "Portfolio",
+        "contact": "Kontakt"
+      },
+      "about": {
+        "title": "Om Mo IT Services",
+        "description": "Vi är ett passionerat team av teknikexperter som är dedikerade till att transformera företag genom innovativa digitala lösningar. Med års erfarenhet av webbutveckling, appskapande och digital marknadsföring hjälper vi företag att etablera en stark online-närvaro och uppnå sina teknologiska mål.",
+        "mission": "Vårt uppdrag är att överbrygga klyftan mellan teknik och affärsframgång, leverera toppmoderna lösningar som driver tillväxt och innovation."
+      },
+      "services": {
+        "title": "Våra Servicepaket",
+        "subtitle": "Välj det perfekta paketet för dina affärsbehov",
+        "packages": {
+          "budget": {
+            "name": "Budgetpaket",
+            "price": "7,000",
+            "support": "1 Månads Gratis Teknisk Support",
+            "features": [
+              "Webbplats & App Utveckling",
+              "Domänregistrering & Hantering",
+              "Sökmotoroptimering (SEO)",
+              "Utbildning & Konsultation",
+              "1 Månads Gratis Teknisk Support & Underhåll"
+            ]
+          },
+          "professional": {
+            "name": "Professionellt Paket",
+            "price": "11,000",
+            "support": "2 Månaders Gratis Teknisk Support",
+            "features": [
+              "Allt i Budgetpaketet",
+              "Webbhotell & Deployment",
+              "Företags E-post Setup",
+              "Personlig Dashboard",
+              "2 Månaders Gratis Teknisk Support & Underhåll"
+            ]
+          },
+          "premium": {
+            "name": "Premium Paket",
+            "price": "15,000",
+            "support": "3 Månaders Gratis Teknisk Support",
+            "features": [
+              "Allt från Professionella Paketet",
+              "Sociala Medier Integration",
+              "Sociala Medier Hantering",
+              "Enkel Online Beställning",
+              "Flexibla Betalningsalternativ",
+              "Chat Bot Implementation",
+              "3 Månaders Gratis Teknisk Support & Underhåll"
+            ]
+          },
+          "custom": {
+            "name": "Anpassat Paket",
+            "price": "?",
+            "support": "Premium Support",
+            "features": [
+              "Anpassat till dina specifika behov",
+              "Flexibla prisalternativ",
+              "Skalbara lösningar",
+              "Avancerade integrationer",
+              "Dedikerad projektledare"
+            ]
+          }
+        }
+      },
+      "portfolio": {
+        "title": "Vårt Utvalda Arbete",
+        "subtitle": "Visar våra mest påverkningsfulla projekt",
+        "projects": [
+          {
+            "title": "IKZ - Interkulturelles Zentrum",
+            "category": "Ideell Organisation",
+            "year": "2024",
+            "description": "En omfattande digital plattform för en välgörenhetsorganisation baserad i Tyskland, med fokus på interkulturell utbyte och samhällsbyggande. Innehåller flerspråkigt stöd och donationshantering.",
+            "image": "assets/portfolio/ikz-project.jpg",
+            "link": "https://interkulturelles-zentrum.org",
+            "technologies": ["Angular", "TypeScript", "Firebase", "Responsiv Design", "SEO"]
+          },
+          {
+            "title": "Modern Restaurangplattform",
+            "category": "Restaurang & Hotell",
+            "year": "2024",
+            "description": "En sofistikerad restaurangwebbplats med online-menyvisning, bokningssystem och modern responsiv design optimerad för restaurangbranschen.",
+            "image": "assets/portfolio/restaurant-project.jpg",
+            "link": "https://restaurant-template-d4a6d.web.app/",
+            "technologies": ["React", "Firebase", "Material UI", "Progressiv Webbapp", "Mobil-Först"]
+          },
+          {
+            "title": "Juridiska Tjänsteplattform",
+            "category": "Juridik & Professionella Tjänster",
+            "year": "2024",
+            "description": "Professionell advokatfirma webbplats med klientportal, ärendehanteringsfunktioner och konsultationsbokningssystem. Designad för maximalt förtroende och tillgänglighet.",
+            "image": "assets/portfolio/lawyer-project.jpg",
+            "link": null,
+            "technologies": ["Vue.js", "Node.js", "PostgreSQL", "Säker Autentisering", "GDPR-kompatibel"]
+          }
+        ]
+      },
+      "contact": {
+        "title": "Kontakta Oss",
+        "subtitle": "Redo att starta ditt nästa projekt? Låt oss diskutera hur vi kan hjälpa dig uppnå dina mål.",
+        "form": {
+          "name": "Fullständigt Namn",
+          "email": "E-postadress",
+          "company": "Företag (Valfritt)",
+          "service": "Intresserad av Tjänst",
+          "message": "Projektbeskrivning",
+          "messagePlaceholder": "Berätta om dina projektkrav, tidslinje och eventuella specifika funktioner du behöver...",
+          "submit": "Skicka Meddelande"
+        }
+      },
+      "footer": {
+        "brand": "Mo IT Services",
+        "tagline": "Transformerar företag genom teknik.",
+        "quickLinks": "Snabblänkar",
+        "contact": "Kontakt",
+        "email": "info@mo-it-services.com",
+        "phone": "+46790208513",
+        "copyright": "© 2025 Mo IT Services. Alla rättigheter förbehållna."
+      }
+    },
+    "de": {
+      "navbar": {
+        "brand": "Mo IT Services",
+        "about": "Über Uns",
+        "services": "Dienstleistungen",
+        "portfolio": "Portfolio",
+        "contact": "Kontakt"
+      },
+      "about": {
+        "title": "Über Mo IT Services",
+        "description": "Wir sind ein leidenschaftliches Team von Technologie-Experten, die sich der Transformation von Unternehmen durch innovative digitale Lösungen widmen. Mit jahrelanger Erfahrung in der Webentwicklung, App-Erstellung und digitalem Marketing helfen wir Unternehmen dabei, eine starke Online-Präsenz aufzubauen und ihre technologischen Ziele zu erreichen.",
+        "mission": "Unsere Mission ist es, die Lücke zwischen Technologie und Geschäftserfolg zu schließen und modernste Lösungen zu liefern, die Wachstum und Innovation vorantreiben."
+      },
+      "services": {
+        "title": "Unsere Service-Pakete",
+        "subtitle": "Wählen Sie das perfekte Paket für Ihre Geschäftsanforderungen",
+        "packages": {
+          "budget": {
+            "name": "Budget-Paket",
+            "price": "7,000",
+            "support": "1 Monat Kostenloser Tech-Support",
+            "features": [
+              "Website & App Entwicklung",
+              "Domain-Registrierung & Verwaltung",
+              "Suchmaschinenoptimierung (SEO)",
+              "Schulung & Beratung",
+              "1 Monat Kostenloser Tech-Support & Wartung"
+            ]
+          },
+          "professional": {
+            "name": "Professionelles Paket",
+            "price": "11,000",
+            "support": "2 Monate Kostenloser Tech-Support",
+            "features": [
+              "Alles im Budget-Paket",
+              "Web-Hosting & Deployment",
+              "Business E-Mail Setup",
+              "Persönliches Dashboard",
+              "2 Monate Kostenloser Tech-Support & Wartung"
+            ]
+          },
+          "premium": {
+            "name": "Premium-Paket",
+            "price": "15,000",
+            "support": "3 Monate Kostenloser Tech-Support",
+            "features": [
+              "Alles vom Professionellen Paket",
+              "Social Media Integration",
+              "Social Media Management",
+              "Einfache Online-Bestellung",
+              "Flexible Zahlungsoptionen",
+              "Chat Bot Implementierung",
+              "3 Monate Kostenloser Tech-Support & Wartung"
+            ]
+          },
+          "custom": {
+            "name": "Individuelles Paket",
+            "price": "?",
+            "support": "Premium Support",
+            "features": [
+              "Auf Ihre spezifischen Bedürfnisse zugeschnitten",
+              "Flexible Preisoptionen",
+              "Skalierbare Lösungen",
+              "Erweiterte Integrationen",
+              "Dedizierter Projektmanager"
+            ]
+          }
+        }
+      },
+      "portfolio": {
+        "title": "Unsere Ausgewählten Arbeiten",
+        "subtitle": "Präsentation unserer wirkungsvollsten Projekte",
+        "projects": [
+          {
+            "title": "IKZ - Interkulturelles Zentrum",
+            "category": "Gemeinnützige Organisation",
+            "year": "2024",
+            "description": "Eine umfassende digitale Plattform für eine Wohltätigkeitsstiftung mit Sitz in Deutschland, die sich auf interkulturellen Austausch und Gemeinschaftsbildung konzentriert. Mit mehrsprachiger Unterstützung und Spendenverwaltung.",
+            "image": "assets/portfolio/ikz-project.jpg",
+            "link": "https://interkulturelles-zentrum.org",
+            "technologies": ["Angular", "TypeScript", "Firebase", "Responsive Design", "SEO"]
+          },
+          {
+            "title": "Moderne Restaurant-Plattform",
+            "category": "Restaurant & Gastronomie",
+            "year": "2024",
+            "description": "Eine ausgeklügelte Restaurant-Website mit Online-Menü-Anzeige, Reservierungssystem und modernem responsivem Design, optimiert für die Gastronomiebranche.",
+            "image": "assets/portfolio/restaurant-project.jpg",
+            "link": "https://restaurant-template-d4a6d.web.app/",
+            "technologies": ["React", "Firebase", "Material UI", "Progressive Web App", "Mobile-First"]
+          },
+          {
+            "title": "Rechtsdienstleistungsplattform",
+            "category": "Recht & Professionelle Dienstleistungen",
+            "year": "2024",
+            "description": "Professionelle Anwaltskanzlei-Website mit Mandantenportal, Fallmanagement-Funktionen und Beratungsbuchungssystem. Für maximales Vertrauen und Zugänglichkeit konzipiert.",
+            "image": "assets/portfolio/lawyer-project.jpg",
+            "link": null,
+            "technologies": ["Vue.js", "Node.js", "PostgreSQL", "Sichere Authentifizierung", "DSGVO-konform"]
+          }
+        ]
+      },
+      "contact": {
+        "title": "Kontakt Aufnehmen",
+        "subtitle": "Bereit, Ihr nächstes Projekt zu starten? Lassen Sie uns besprechen, wie wir Ihnen helfen können, Ihre Ziele zu erreichen.",
+        "form": {
+          "name": "Vollständiger Name",
+          "email": "E-Mail-Adresse",
+          "company": "Unternehmen (Optional)",
+          "service": "Interessierte Dienstleistung",
+          "message": "Projektbeschreibung",
+          "messagePlaceholder": "Erzählen Sie uns von Ihren Projektanforderungen, Zeitplan und spezifischen Funktionen, die Sie benötigen...",
+          "submit": "Nachricht Senden"
+        }
+      },
+      "footer": {
+        "brand": "Mo IT Services",
+        "tagline": "Unternehmen durch Technologie transformieren.",
+        "quickLinks": "Schnelle Links",
+        "contact": "Kontakt",
+        "email": "info@mo-it-services.com",
+        "phone": "+46790208513",
+        "copyright": "© 2025 Mo IT Services. Alle Rechte vorbehalten."
+      }
+    },
+    "ar": {
+      "navbar": {
+        "brand": "Mo IT Services",
+        "about": "من نحن",
+        "services": "الخدمات",
+        "portfolio": "الأعمال",
+        "contact": "اتصل بنا"
+      },
+      "about": {
+        "title": "حول Mo IT Services",
+        "description": "نحن فريق متحمس من خبراء التكنولوجيا المتخصصين في تحويل الشركات من خلال الحلول الرقمية المبتكرة. مع سنوات من الخبرة في تطوير الويب وإنشاء التطبيقات والتسويق الرقمي، نساعد الشركات على إنشاء حضور قوي عبر الإنترنت وتحقيق أهدافها التقنية.",
+        "mission": "مهمتنا هي سد الفجوة بين التكنولوجيا ونجاح الأعمال، وتقديم حلول متطورة تدفع النمو والابتكار."
+      },
+      "services": {
+        "title": "حزم خدماتنا",
+        "subtitle": "اختر الحزمة المثالية لاحتياجات عملك",
+        "packages": {
+          "budget": {
+            "name": "الحزمة الاقتصادية",
+            "price": "7,000",
+            "support": "شهر واحد دعم تقني مجاني",
+            "features": [
+              "تطوير المواقع والتطبيقات",
+              "تسجيل وإدارة النطاقات",
+              "تحسين محركات البحث",
+              "التدريب والاستشارة",
+              "شهر واحد دعم تقني مجاني وصيانة"
+            ]
+          },
+          "professional": {
+            "name": "الحزمة المهنية",
+            "price": "11,000",
+            "support": "شهرين دعم تقني مجاني",
+            "features": [
+              "كل ما في الحزمة الاقتصادية",
+              "استضافة الويب والنشر",
+              "إعداد البريد الإلكتروني للأعمال",
+              "لوحة تحكم شخصية",
+              "شهرين دعم تقني مجاني وصيانة"
+            ]
+          },
+          "premium": {
+            "name": "الحزمة المميزة",
+            "price": "15,000",
+            "support": "ثلاثة أشهر دعم تقني مجاني",
+            "features": [
+              "كل ما في الحزمة المهنية",
+              "تكامل وسائل التواصل الاجتماعي",
+              "إدارة وسائل التواصل الاجتماعي",
+              "طلب سهل عبر الإنترنت",
+              "خيارات دفع مرنة",
+              "تنفيذ روبوت المحادثة",
+              "ثلاثة أشهر دعم تقني مجاني وصيانة"
+            ]
+          },
+          "custom": {
+            "name": "الحزمة المخصصة",
+            "price": "؟",
+            "support": "دعم مميز",
+            "features": [
+              "مصممة حسب احتياجاتك المحددة",
+              "خيارات تسعير مرنة",
+              "حلول قابلة للتوسيع",
+              "تكاملات متقدمة",
+              "مدير مشروع مخصص"
+            ]
+          }
+        }
+      },
+      "portfolio": {
+        "title": "أعمالنا المميزة",
+        "subtitle": "عرض مشاريعنا الأكثر تأثيراً",
+        "projects": [
+          {
+            "title": "IKZ - المركز الثقافي المتنوع",
+            "category": "منظمة غير ربحية",
+            "year": "2024",
+            "description": "منصة رقمية شاملة لمؤسسة خيرية مقرها ألمانيا، تركز على التبادل الثقافي وبناء المجتمع. تتضمن الدعم متعدد اللغات وإدارة التبرعات.",
+            "image": "assets/portfolio/ikz-project.jpg",
+            "link": "https://interkulturelles-zentrum.org",
+            "technologies": ["Angular", "TypeScript", "Firebase", "تصميم متجاوب", "تحسين محركات البحث"]
+          },
+          {
+            "title": "منصة مطعم حديثة",
+            "category": "مطاعم وضيافة",
+            "year": "2024",
+            "description": "موقع مطعم متطور يتضمن عرض القائمة عبر الإنترنت ونظام حجز وتصميم متجاوب حديث محسن لصناعة الخدمات الغذائية.",
+            "image": "assets/portfolio/restaurant-project.jpg",
+            "link": "https://restaurant-template-d4a6d.web.app/",
+            "technologies": ["React", "Firebase", "Material UI", "تطبيق ويب تقدمي", "الجوال أولاً"]
+          },
+          {
+            "title": "منصة الخدمات القانونية",
+            "category": "قانون وخدمات مهنية",
+            "year": "2024",
+            "description": "موقع مكتب محاماة مهني مع بوابة العملاء وميزات إدارة القضايا ونظام حجز الاستشارات. مصمم لأقصى درجات الثقة وسهولة الوصول.",
+            "image": "assets/portfolio/lawyer-project.jpg",
+            "link": null,
+            "technologies": ["Vue.js", "Node.js", "PostgreSQL", "مصادقة آمنة", "متوافق مع القانون العام لحماية البيانات"]
+          }
+        ]
+      },
+      "contact": {
+        "title": "تواصل معنا",
+        "subtitle": "هل أنت مستعد لبدء مشروعك القادم؟ دعنا نناقش كيف يمكننا مساعدتك في تحقيق أهدافك.",
+        "form": {
+          "name": "الاسم الكامل",
+          "email": "عنوان البريد الإلكتروني",
+          "company": "الشركة (اختياري)",
+          "service": "الخدمة المهتم بها",
+          "message": "وصف المشروع",
+          "messagePlaceholder": "أخبرنا عن متطلبات مشروعك والجدول الزمني وأي ميزات محددة تحتاجها...",
+          "submit": "إرسال الرسالة"
+        }
+      },
+      "footer": {
+        "brand": "Mo IT Services",
+        "tagline": "تحويل الشركات من خلال التكنولوجيا.",
+        "quickLinks": "روابط سريعة",
+        "contact": "اتصل بنا",
+        "email": "info@mo-it-services.com",
+        "phone": "+46790208513",
+        "copyright": "© 2025 Mo IT Services. جميع الحقوق محفوظة."
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 <div class="services-container">
   <div class="services-header">
-    <h1>Our Service Packages</h1>
-    <p>Choose the perfect package for your business needs</p>
+    <h1>{{ servicesTexts.title || 'Our Service Packages' }}</h1>
+    <p>{{ servicesTexts.subtitle || 'Choose the perfect package for your business needs' }}</p>
   </div>
   
   <div class="packages-grid">
@@ -37,44 +37,28 @@
       </div>
     </div>
     
-    <!-- Custom option moved as the 4th package card -->
-    <div class="package-card package-4">
+    <!-- Custom option as the 4th package card -->
+    <div class="package-card package-4" *ngIf="servicesTexts.packages?.custom">
       <div class="package-header">
-        <h3>Custom Package</h3>
+        <h3>{{ servicesTexts.packages.custom.name || 'Custom Package' }}</h3>
         <div class="package-price">
-          <span class="price">?</span>
+          <span class="price">{{ servicesTexts.packages.custom.price || '?' }}</span>
           <span class="currency">kr</span>
         </div>
       </div>
       
       <div class="package-content">
         <ul class="features-list">
-          <li class="feature-item">
+          <li *ngFor="let feature of servicesTexts.packages.custom.features" class="feature-item">
             <span class="check-icon">✓</span>
-            Tailored to your specific needs
-          </li>
-          <li class="feature-item">
-            <span class="check-icon">✓</span>
-            Flexible pricing options
-          </li>
-          <li class="feature-item">
-            <span class="check-icon">✓</span>
-            Scalable solutions
-          </li>
-          <li class="feature-item">
-            <span class="check-icon">✓</span>
-            Advanced integrations
-          </li>
-          <li class="feature-item">
-            <span class="check-icon">✓</span>
-            Dedicated project manager
+            {{ feature }}
           </li>
         </ul>
         
         <div class="support-info">
           <div class="support-badge">
             <span class="support-icon">🛠️</span>
-            Premium Support
+            {{ servicesTexts.packages.custom.support || 'Premium Support' }}
           </div>
         </div>
       </div>

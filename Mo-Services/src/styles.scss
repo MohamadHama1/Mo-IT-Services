@@ -190,3 +190,24 @@ html {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+  
+  .navbar {
+    .nav-links {
+      flex-direction: row-reverse;
+    }
+  }
+  
+  .package-card {
+    text-align: right;
+  }
+  
+  .form-row {
+    flex-direction: row-reverse;
+  }
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

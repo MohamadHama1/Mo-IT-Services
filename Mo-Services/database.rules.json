@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "translations": {
+      ".read": true,
+      ".write": "auth != null"
+    }
+  }
+}

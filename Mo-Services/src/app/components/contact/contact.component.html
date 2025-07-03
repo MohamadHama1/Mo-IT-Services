@@ -1,85 +1,144 @@
-  <div class="contact-container">
-      <div class="contact-content">
-        <div class="contact-header">
-          <h1>Get In Touch</h1>
-          <p>Ready to start your next project? Let's discuss how we can help you achieve your goals.</p>
+<div class="contact-container">
+  <div class="contact-content">
+    <div class="contact-header">
+      <h1>{{ contactTexts.title || 'Get In Touch' }}</h1>
+      <p>{{ contactTexts.subtitle || 'Ready to start your next project? Let\'s discuss how we can help you achieve your goals.' }}</p>
+    </div>
+    
+    <!-- Success Message -->
+    <div *ngIf="showSuccessMessage" class="alert alert-success">
+      <div class="alert-content">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+          <polyline points="22,4 12,14.01 9,11.01"></polyline>
+        </svg>
+        <div>
+          <strong>🎉 Message sent successfully!</strong>
+          <p>Thank you for your inquiry! We've received your message and will get back to you within <strong>48 hours</strong>. 
+             Please check your email (including spam folder) for our response.</p>
+          <p class="success-note">💡 <strong>Next steps:</strong> We'll review your requirements and send you a detailed proposal with timeline and pricing.</p>
         </div>
-        
-        <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm">
-          <div class="form-row">
-            <div class="form-group">
-              <label for="name">Full Name</label>
-              <input 
-                type="text" 
-                id="name" 
-                name="name" 
-                [(ngModel)]="formData.name" 
-                required 
-                class="form-control">
-            </div>
-            
-            <div class="form-group">
-              <label for="email">Email Address</label>
-              <input 
-                type="email" 
-                id="email" 
-                name="email" 
-                [(ngModel)]="formData.email" 
-                required 
-                class="form-control">
-            </div>
-          </div>
-          
-          <div class="form-row">
-            <div class="form-group">
-              <label for="company">Company (Optional)</label>
-              <input 
-                type="text" 
-                id="company" 
-                name="company" 
-                [(ngModel)]="formData.company" 
-                class="form-control">
-            </div>
-            
-            <div class="form-group">
-              <label for="service">Service Interested In</label>
-              <select 
-                id="service" 
-                name="service" 
-                [(ngModel)]="formData.service" 
-                required 
-                class="form-control">
-                <option value="">Select a service</option>
-                <option value="budget-package">Budget Package (7,000 kr)</option>
-                <option value="professional-package">Professional Package (11,000 kr)</option>
-                <option value="premium-package">Premium Package (15,000 kr)</option>
-                <option value="custom-solution">Custom Solution</option>
-                <option value="consultation">Consultation Only</option>
-              </select>
-            </div>
-          </div>
-          
-          <div class="form-group full-width">
-            <label for="message">Project Description</label>
-            <textarea 
-              id="message" 
-              name="message" 
-              [(ngModel)]="formData.message" 
-              required 
-              rows="6" 
-              class="form-control"
-              placeholder="Tell us about your project requirements, timeline, and any specific features you need..."></textarea>
-          </div>
-          
-          <button 
-            type="submit" 
-            class="submit-btn" 
-            [disabled]="!contactForm.form.valid">
-            <span>Send Message</span>
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
-            </svg>
-          </button>
-        </form>
       </div>
     </div>
+    
+    <!-- Error Message -->
+    <div *ngIf="showErrorMessage" class="alert alert-error">
+      <div class="alert-content">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"></circle>
+          <line x1="15" y1="9" x2="9" y2="15"></line>
+          <line x1="9" y1="9" x2="15" y2="15"></line>
+        </svg>
+        <div>
+          <strong>❌ Something went wrong!</strong>
+          <p>We couldn't send your message. Please try again in a few moments.</p>
+          <p class="error-note">If the problem persists, you can reach us directly at: 
+             <a href="mailto:contact@mo-it-services.com">contact&#64;mo-it-services.com</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <form class="contact-form" (ngSubmit)="onSubmit()" #contactForm="ngForm" [class.form-disabled]="isSubmitting">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="name">{{ contactTexts.form?.name || 'Full Name' }} <span class="required">*</span></label>
+          <input 
+            type="text" 
+            id="name" 
+            name="name" 
+            [(ngModel)]="formData.name" 
+            required 
+            class="form-control"
+            [disabled]="isSubmitting"
+            placeholder="Your full name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">{{ contactTexts.form?.email || 'Email Address' }} <span class="required">*</span></label>
+          <input 
+            type="email" 
+            id="email" 
+            name="email" 
+            [(ngModel)]="formData.email" 
+            required 
+            class="form-control"
+            [disabled]="isSubmitting"
+            placeholder="your.email@example.com">
+        </div>
+      </div>
+      
+      <div class="form-row">
+        <div class="form-group">
+          <label for="company">{{ contactTexts.form?.company || 'Company (Optional)' }}</label>
+          <input 
+            type="text" 
+            id="company" 
+            name="company" 
+            [(ngModel)]="formData.company" 
+            class="form-control"
+            [disabled]="isSubmitting"
+            placeholder="Your company name">
+        </div>
+        
+        <div class="form-group">
+          <label for="service">{{ contactTexts.form?.service || 'Service Interested In' }} <span class="required">*</span></label>
+          <select 
+            id="service" 
+            name="service" 
+            [(ngModel)]="formData.service" 
+            required 
+            class="form-control"
+            [disabled]="isSubmitting">
+            <option value="">Select a service</option>
+            <option value="budget-package">💰 Budget Package (7,000 kr)</option>
+            <option value="professional-package">⭐ Professional Package (11,000 kr)</option>
+            <option value="premium-package">🚀 Premium Package (15,000 kr)</option>
+            <option value="custom-solution">🔧 Custom Solution</option>
+            <option value="consultation">💬 Consultation Only</option>
+          </select>
+        </div>
+      </div>
+      
+      <div class="form-group full-width">
+        <label for="message">{{ contactTexts.form?.message || 'Project Description' }} <span class="required">*</span></label>
+        <textarea 
+          id="message" 
+          name="message" 
+          [(ngModel)]="formData.message" 
+          required 
+          rows="6" 
+          class="form-control"
+          [disabled]="isSubmitting"
+          [placeholder]="contactTexts.form?.messagePlaceholder || 'Tell us about your project: What do you need? When do you need it? Any specific features or requirements? The more details you provide, the better we can help you!'"></textarea>
+        <div class="form-hint">
+          💡 <strong>Tip:</strong> Include your timeline, budget range, and any specific technologies or features you need.
+        </div>
+      </div>
+      
+      <button 
+        type="submit" 
+        class="submit-btn" 
+        [disabled]="!contactForm.form.valid || isSubmitting">
+        <span *ngIf="!isSubmitting" class="btn-content">
+          <span>{{ contactTexts.form?.submit || 'Send Message' }}</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+          </svg>
+        </span>
+        
+        <span *ngIf="isSubmitting" class="btn-content">
+          <span>Sending your message...</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="loading-spinner">
+            <path d="M21 12a9 9 0 11-6.219-8.56"/>
+          </svg>
+        </span>
+      </button>
+      
+      <div class="form-footer">
+        <p class="privacy-note">
+          🔒 Your information is secure and will only be used to respond to your inquiry.
+        </p>
+      </div>
+    </form>
+  </div>
+</div>

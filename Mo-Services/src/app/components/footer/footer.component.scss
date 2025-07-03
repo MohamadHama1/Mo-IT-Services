@@ -1,72 +1,118 @@
 .footer {
-      background: #1a1a2e;
-      color: white;
-      padding: 1.5rem 0 0.8rem;
-      
-    }
-    
-    .footer-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1.5rem;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-    
-    .footer-section h4 {
-      margin-bottom: 0.2rem;
-      color: #ecf0f1;
-      font-size: 1rem;
-      font-weight: 600;
-    }
-    
-    .footer-section p {
-      opacity: 0.8;
-      line-height: 1.5;
-      margin-bottom: 0.3rem;
-      font-size: 0.9rem;
-    }
-    
-    .footer-section ul {
-      list-style: none;
-      padding: 0;
-    }
-    
-    .footer-section ul li {
-      margin-bottom: 0.3rem;
-    }
-    
-    .footer-section ul li a {
-      color: white;
-      text-decoration: none;
-      opacity: 0.8;
-      transition: opacity 0.3s ease;
-      font-size: 0.9rem;
-    }
-    
-    .footer-section ul li a:hover {
-      opacity: 1;
-      color: #FFD700;
-    }
-    
-    .footer-bottom {
-      border-top: 1px solid #34495e;
-      margin-top: 1.5rem;
-      padding-top: 0.3rem;
-      text-align: center;
-    }
-    
-    .footer-bottom p {
-      margin: 0;
-      opacity: 0.7;
-      font-size: 0.8rem;
-    }
-    
-    @media (max-width: 768px) {
-      .footer-content {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 1rem;
-      }
-    }
+  background: #1a1a2e;
+  color: white;
+  padding: 0.5rem 0 0.8rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.footer-section h4 {
+  margin-bottom: 0.2rem;
+  color: #ecf0f1;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.footer-section p {
+  opacity: 0.8;
+  line-height: 1.5;
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 0.3rem;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.footer-section ul li a:hover {
+  opacity: 1;
+  color: #FFD700;
+}
+
+// New styles for Quick Links section
+.links-columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.links-column {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.links-column a {
+  color: white;
+  text-decoration: none;
+  opacity: 0.8;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.links-column a:hover {
+  opacity: 1;
+  color: #FFD700;
+}
+
+// Add separator after each link except the last one
+.links-column a:not(:last-child)::after {
+  content: " || ";
+  color: white;
+  opacity: 0.6;
+  margin-left: 0.5rem;
+  font-weight: normal;
+}
+
+.footer-bottom {
+  border-top: 1px solid #34495e;
+  margin-top: 1.5rem;
+  padding-top: 0.3rem;
+  text-align: center;
+}
+
+.footer-bottom p {
+  margin: 0;
+  opacity: 0.7;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1rem;
+  }
+  
+  // Stack links vertically on mobile for better readability
+  .links-column {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+  
+  // Remove separators on mobile since links are stacked
+  .links-column a:not(:last-child)::after {
+    display: none;
+  }
+}

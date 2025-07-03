@@ -1,0 +1,113 @@
+/* language-selector.component.scss - Updated to match switcher layout */
+
+.language-selector-inline {
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Center the content */
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+  
+  /* Fixed positioning in top-right corner */
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  
+  margin: 0;
+  padding: 8px 12px; /* Add padding for better touch targets */
+  background: rgba(0, 0, 0, 0.2); /* Slightly more opaque for better visibility when floating */
+  border-radius: 6px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow for floating effect */
+  
+  /* Ensure it doesn't get too wide */
+  max-width: 120px;
+  min-width: 80px;
+  white-space: nowrap; /* Prevent text wrapping */
+
+  /* Responsive positioning and sizing */
+  @media (max-width: 768px) {
+    font-size: 13px;
+    padding: 6px 10px;
+    max-width: 100px;
+    min-width: 70px;
+    top: 15px;
+    right: 15px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 12px;
+    padding: 5px 8px;
+    max-width: 85px;
+    min-width: 60px;
+    top: 12px;
+    right: 12px;
+  }
+
+  @media (max-width: 360px) {
+    font-size: 11px;
+    padding: 4px 6px;
+    max-width: 75px;
+    min-width: 55px;
+    top: 10px;
+    right: 10px;
+  }
+
+  .language-option {
+    cursor: pointer;
+    padding: 2px 3px; /* Reduced padding for better fit */
+    color: #ffffff;
+    transition: all 0.2s ease;
+    border-radius: 3px;
+    
+    /* Responsive text sizing */
+    @media (max-width: 480px) {
+      padding: 1px 2px;
+    }
+
+    &.active {
+      color: #FFD700;
+      font-weight: bold;
+      background: rgba(28, 168, 0, 0.1); /* Subtle background for active state */
+    }
+
+    &:hover {
+      color: #FFD700;
+      background: rgba(255, 255, 255, 0.1);
+    }
+  }
+
+  .separator {
+    margin: 0 3px; /* Slightly increased for better readability */
+    color: #999;
+    font-weight: normal;
+    
+    @media (max-width: 480px) {
+      margin: 0 2px; /* Reduce spacing on small screens */
+    }
+    
+    @media (max-width: 360px) {
+      margin: 0 1px; /* Minimal spacing on tiny screens */
+    }
+  }
+}
+
+/* RTL support for Arabic */
+:host-context([dir="rtl"]) .language-selector-inline {
+  direction: rtl;
+  right: auto;
+  left: 20px;
+  
+  @media (max-width: 768px) {
+    left: 15px;
+  }
+
+  @media (max-width: 480px) {
+    left: 12px;
+  }
+
+  @media (max-width: 360px) {
+    left: 10px;
+  }
+}
